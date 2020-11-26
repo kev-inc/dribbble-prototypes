@@ -1,10 +1,12 @@
 import Link from "next/link";
-import { ListGroup } from "react-bootstrap";
+import { ListGroup, Card, Button } from "react-bootstrap";
+import MdArrowDropright from "react-ionicons/lib/MdArrowDropright";
+import LogoGithub from "react-ionicons/lib/LogoGithub";
 
 export default function IndexPage() {
   const apps = [
     {
-      name: "Booking App",
+      name: "Hotel Booking App",
       href: "/booking",
       url: "https://dribbble.com/shots/14646942-Booking-App"
     },
@@ -21,18 +23,38 @@ export default function IndexPage() {
   ];
   return (
     <div className="p-4">
-      <h3>Welcome to Dribbble Prototypes</h3>
-      <ListGroup>
-        {apps.map((item, index) => (
-          <ListGroup.Item>
-            <Link href={item.href}>{item.name}</Link>
-            <br />
-            <a href={item.url}>
-              <small>Dribbble link</small>
-            </a>
-          </ListGroup.Item>
-        ))}
-      </ListGroup>
+      <h3 className="montbold">UI/UX Design Book</h3>
+      <p className="montlight">
+        This website hosts a collection of webpages with designs adapted from
+        Dribbble.
+      </p>
+      {apps.map((item, index) => (
+        <Card body className="my-2 shadow-sm">
+          <div className="d-flex justify-content-between align-items-center">
+            <div>
+              <h6>{item.name}</h6>
+              <small>
+                View the original at <a href={item.url}>Dribbble</a>
+              </small>
+            </div>
+            <div>
+              <Link href={item.href}>
+                <Button variant="light">
+                  <MdArrowDropright style={{ opacity: 0.5 }} />
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </Card>
+      ))}
+      <div className="text-center mt-4">
+        <Link href="https://github.com/kev-inc/dribbble-prototypes">
+          <Button variant="light" size="sm" style={{ opacity: 0.5 }}>
+            <LogoGithub />
+            <small className="montbold ml-2">View on GitHub</small>
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 }
