@@ -52,10 +52,10 @@ export default function BookingApp() {
           </Nav.Item>
         </Nav>
         <Nav>
-          <Nav.Item>
+          <Nav.Item className="d-flex align-items-center">
             <small>Beverly Chang</small>
           </Nav.Item>
-          <Nav.Item className="pl-3">
+          <Nav.Item className="px-2">
             <Image
               style={{ height: "32px", width: "32px" }}
               src="https://i.pinimg.com/originals/26/bf/5d/26bf5df9cca10e608e8211903547917d.jpg"
@@ -64,8 +64,8 @@ export default function BookingApp() {
           </Nav.Item>
         </Nav>
       </div>
-      <div className="navbar text-white">
-        <Navbar.Brand>Dubai, UAE</Navbar.Brand>
+      <div className="navbar text-white px-4">
+        <Navbar.Brand className="montbold">Dubai, UAE</Navbar.Brand>
         <Nav className="ml-auto">
           <Nav.Item>
             <Button variant="link">
@@ -109,13 +109,13 @@ export default function BookingApp() {
                     <small className="text-muted">{item.location}</small>
                     <br />
                     <small>{item.desc}</small>
-                    <div>
+                    <div className="d-flex align-items-center py-2">
                       <MdStar color="#f0ad4e" />
                       <MdStar color="#f0ad4e" />
                       <MdStar color="#f0ad4e" />
                       <MdStar color="#f0ad4e" />
                       <MdStar color="#f7f7f7" />
-                      <small className="text-warning">4.0</small>
+                      <small className="text-warning pl-2">4.0</small>
                     </div>
                     <div>
                       <span className="text-primary">${item.price} </span>

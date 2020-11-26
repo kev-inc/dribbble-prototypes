@@ -3,3 +3,11 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
+
+.montbold {
+  font-weight: 700;
+}
+
+.montlight {
+  font-weight: 400;
+}

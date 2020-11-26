@@ -3,9 +3,6 @@ import {
   Navbar,
   Image,
   Card,
-  Container,
-  Row,
-  Col,
   Button,
   InputGroup,
   FormControl,
@@ -39,12 +36,14 @@ export default function SubscriptionHome() {
   return (
     <div style={{ backgroundColor: "#0f1630", marginBottom: "48px" }}>
       <div className="navbar text-white py-4">
-        <Navbar.Brand>Schedule</Navbar.Brand>
+        <Navbar.Brand className="montbold">Schedule</Navbar.Brand>
         <Nav className="ml-auto">
           <Nav.Item>
-            <Button variant="link">
-              <MdNotificationsOutline color="white" />
-            </Button>
+            <Link href="/">
+              <Button variant="link">
+                <MdNotificationsOutline color="white" />
+              </Button>
+            </Link>
           </Nav.Item>
         </Nav>
       </div>
@@ -72,10 +71,12 @@ export default function SubscriptionHome() {
               }}
               rounded
             />
-            <h5>{item.name}</h5>
-            <strong>${item.price}.00</strong>
+            <h6 className="py-1">{item.name}</h6>
+            <span className="montbold" style={{ fontSize: "20px" }}>
+              ${item.price}.00
+            </span>
             <br />
-            <small>/month</small>
+            <span style={{ fontSize: "12px" }}>/month</span>
           </Card>
         ))}
       </div>
@@ -88,7 +89,7 @@ export default function SubscriptionHome() {
           padding: "24px"
         }}
       >
-        <h3>Recent</h3>
+        <h3 className="montbold">Recent</h3>
 
         <InputGroup className="mb-3">
           <InputGroup.Prepend>
@@ -135,7 +136,7 @@ export default function SubscriptionHome() {
               />
               <div className="mr-auto ml-2" style={{ display: "inline-block" }}>
                 <h5>{item.name}</h5>
-                <h6>${item.price}/Month</h6>
+                <h6 className="montlight">${item.price}/Month</h6>
               </div>
               <div
                 className="text-center bg-light px-2"

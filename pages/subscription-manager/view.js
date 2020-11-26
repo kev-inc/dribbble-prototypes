@@ -71,7 +71,7 @@ export default function SMViewPage() {
           padding: "24px"
         }}
       >
-        <h3>History</h3>
+        <h3 className="montbold">History</h3>
         <ListGroup variant="flush">
           {["November", "October", "September"].map((item, index) => (
             <ListGroup.Item className="d-flex align-items-center">
@@ -88,9 +88,9 @@ export default function SMViewPage() {
               />
               <div className="mr-auto ml-2" style={{ display: "inline-block" }}>
                 <h5>Dropbox</h5>
-                <h6>4 {item} 2020</h6>
+                <h6 className="montlight">4 {item} 2020</h6>
               </div>
-              <strong>$8</strong>
+              <strong style={{ fontSize: "24px" }}>$8</strong>
             </ListGroup.Item>
           ))}
         </ListGroup>
