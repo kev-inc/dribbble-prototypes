@@ -11,5 +11,3 @@ jobs:
         with:
           source: https://dribbble-prototypes.vercel.app/booking
           destination: screenshots/booking.png
-          width: 411
-          height: 731
