@@ -3,11 +3,16 @@ on:
   push:
     branches: [ main ]
 jobs:
-  build:
+  screenshot:
+    name: Screenshot
+    strategy:
+      matrix: 
+        sites: [booking, subscription-manager, medical]
     runs-on: ubuntu-latest
     steps:
       - name: Screenshot Websites
         uses: swinton/screenshot-website@v1.x
         with:
-          source: https://dribbble-prototypes.vercel.app/booking
-          destination: booking.png
+          source: https://dribbble-prototypes.vercel.app/${{matrix.sites}}
+          width: 411
+          path: screenshots/${{matrix.sites}}.png
