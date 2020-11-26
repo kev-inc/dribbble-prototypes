@@ -8,7 +8,6 @@ import {
   Col,
   Button
 } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 import MdSearch from "react-ionicons/lib/MdSearch";
 import MdMenu from "react-ionicons/lib/MdMenu";
 import MdStar from "react-ionicons/lib/MdStar";

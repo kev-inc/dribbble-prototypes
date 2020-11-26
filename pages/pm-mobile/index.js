@@ -1,5 +1,4 @@
 import { Nav, Container, Row, Col, Button, Card, Image } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 import MdAdd from "react-ionicons/lib/MdAdd";
 import MdMenu from "react-ionicons/lib/MdMenu";
 import MdSearch from "react-ionicons/lib/MdSearch";
