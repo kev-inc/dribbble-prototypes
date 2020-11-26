@@ -94,28 +94,20 @@ export default function ViewPage() {
             </Col>
           </Row>
           <Row>
-            <Col className="text-center">
-              <Button variant="light">?</Button>
-            </Col>
-            <Col className="text-center">
-              <Button variant="light">?</Button>
-            </Col>
-            <Col className="text-center">
-              <Button variant="light">?</Button>
-            </Col>
-            <Col className="text-center">
-              <Button variant="light">?</Button>
-            </Col>
-            <Col className="text-center">
-              <Button variant="light">?</Button>
-            </Col>
+            {["?", "?", "?", "?", "?"].map((item, index) => (
+              <Col>
+                <Button variant="light" block>
+                  ?
+                </Button>
+              </Col>
+            ))}
           </Row>
           <Row>
-            <Col className="text-center">Wi-Fi</Col>
-            <Col className="text-center">Service</Col>
-            <Col className="text-center">Gym</Col>
-            <Col className="text-center">Spa</Col>
-            <Col className="text-center">More</Col>
+            {["Wi-Fi", "Service", "Gym", "Spa", "More"].map((item, index) => (
+              <Col className="text-center">
+                <small>{item}</small>
+              </Col>
+            ))}
           </Row>
         </Container>
       </div>
