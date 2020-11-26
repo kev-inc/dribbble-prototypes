@@ -1,0 +1,15 @@
+name: Screenshot websites
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Screenshot Websites
+        uses: swinton/screenshot-website@v1.x
+        with:
+          source: https://dribbble-prototypes.vercel.app/booking
+          destination: screenshots/booking.png
+          width: 411
+          height: 731
