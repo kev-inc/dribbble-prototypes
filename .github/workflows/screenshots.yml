@@ -10,4 +10,4 @@ jobs:
         uses: swinton/screenshot-website@v1.x
         with:
           source: https://dribbble-prototypes.vercel.app/booking
-          destination: screenshots/booking.png
+          destination: booking.png
