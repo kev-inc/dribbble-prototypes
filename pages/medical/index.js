@@ -46,9 +46,13 @@ export default function MedicalPage() {
         style={{ color: "#A94A48" }}
       >
         <Navbar.Brand className="montbold">
-          <div className="montlight">Hello,</div>
-          <div className="montbold">Michael!</div>
-          <div className="montlight" style={{ fontSize: "12px" }}>
+          <div className="montlight" style={{ fontSize: "36px" }}>
+            Hello,
+          </div>
+          <div className="montverybold" style={{ fontSize: "36px" }}>
+            Michael!
+          </div>
+          <div className="montlight" style={{ fontSize: "16px" }}>
             How are you today?
           </div>
         </Navbar.Brand>
@@ -73,24 +77,36 @@ export default function MedicalPage() {
       <Card
         body
         className="m-2 text-white shadow-sm"
-        style={{ borderRadius: "12px", backgroundColor: "#5f5197" }}
+        style={{
+          borderRadius: "16px",
+          backgroundColor: "#5f5197",
+          paddingBottom: "8px"
+        }}
       >
-        <div className="d-flex justify-content-between">
+        <div className="d-flex justify-content-between align-items-center">
           <div>
             <div
-              className="montbold"
-              style={{ color: "#eaa7a7", fontSize: "8px" }}
+              className="montbold py-2"
+              style={{
+                color: "#eaa7a7",
+                fontSize: "8px",
+                letterSpacing: "1.5px"
+              }}
             >
               YOUR FAMILY DOCTOR
             </div>
-
-            <h5>Dr Helena Norman</h5>
+            <h5 className="montbold w-75">Dr. Helena Norman</h5>
+            <Image
+              className="my-2"
+              style={{ width: "20px", height: "20px" }}
+              src="https://img.icons8.com/fluent-systems-filled/96/ffffff/right.png"
+            />
           </div>
           <Image
             roundedCircle
             style={{
-              height: "48px",
-              width: "48px",
+              height: "64px",
+              width: "64px",
               objectFit: "cover",
               marginLeft: "24px"
             }}
@@ -100,7 +116,7 @@ export default function MedicalPage() {
       </Card>
 
       <div
-        className="d-flex justify-content-between p-2 align-items-center"
+        className="d-flex justify-content-between mt-3 p-2 align-items-center"
         style={{ color: "#5f5197" }}
       >
         <h5>Daily Medications</h5>
@@ -125,7 +141,7 @@ export default function MedicalPage() {
       </div>
 
       <div
-        className="d-flex justify-content-between p-2 align-items-center"
+        className="d-flex justify-content-between mt-3 p-2 align-items-center"
         style={{ color: "#5f5197" }}
       >
         <h5>Today Appointments</h5>
@@ -162,9 +178,11 @@ export default function MedicalPage() {
         <Button variant="link">
           <MdNotificationsOutline style={{ opacity: 0.2 }} />
         </Button>
-        <Button variant="link" style={{ backgroundColor: "#5f5197" }}>
-          <MdCalendar color="white" />
-        </Button>
+        <Link href="/medical/view">
+          <Button variant="link" style={{ backgroundColor: "#5f5197" }}>
+            <MdCalendar color="white" />
+          </Button>
+        </Link>
         <Button variant="link">
           <MdText style={{ opacity: 0.2 }} />
         </Button>
