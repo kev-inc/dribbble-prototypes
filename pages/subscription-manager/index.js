@@ -11,7 +11,6 @@ import {
   FormControl,
   ListGroup
 } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 import MdNotificationsOutline from "react-ionicons/lib/MdNotificationsOutline";
 import MdSearch from "react-ionicons/lib/MdSearch";
 import MdHome from "react-ionicons/lib/MdHome";
