@@ -19,10 +19,11 @@ export default function ViewPage() {
     <div
       style={{
         background: `url('https://r.lvmh-static.com/uploads/2018/07/ok-site-4-2000x1100.jpg')`,
-        backgroundSize: "auto 360px"
+        backgroundSize: "auto 400px",
+        marginBottom: "48px"
       }}
     >
-      <div className="navbar text-white">
+      <div className="navbar text-white py-4">
         <Nav>
           <Nav.Item>
             <Link href="/booking">
@@ -79,9 +80,9 @@ export default function ViewPage() {
             </Col>
           </Row>
           <Row>
-            <Col>
+            <Col className="d-flex align-items-center">
               <MdStar color="#f0ad4e" />
-              <span>4.8 | 242 Reviews</span>
+              <span className="px-2">4.8 | 242 Reviews</span>
             </Col>
           </Row>
           <Row>
@@ -93,48 +94,29 @@ export default function ViewPage() {
             </Col>
           </Row>
           <Row>
-            <Col>
-              <Button variant="light" block>
-                ?
-              </Button>
-            </Col>
-            <Col>
-              <Button variant="light" block>
-                ?
-              </Button>
-            </Col>
-            <Col>
-              <Button variant="light" block>
-                ?
-              </Button>
-            </Col>
-            <Col>
-              <Button variant="light" block>
-                ?
-              </Button>
-            </Col>
-            <Col>
-              <Button variant="light" block>
-                ?
-              </Button>
-            </Col>
+            {["?", "?", "?", "?", "?"].map((item, index) => (
+              <Col>
+                <Button variant="light" block>
+                  ?
+                </Button>
+              </Col>
+            ))}
           </Row>
           <Row>
-            <Col>Wi-Fi</Col>
-            <Col>Service</Col>
-            <Col>Gym</Col>
-            <Col>Spa</Col>
-            <Col>More</Col>
-          </Row>
-          <Row>
-            <Col>
-              <Button variant="primary" block style={{ borderRadius: "24px" }}>
-                BOOK NOW
-              </Button>
-            </Col>
+            {["Wi-Fi", "Service", "Gym", "Spa", "More"].map((item, index) => (
+              <Col className="text-center">
+                <small>{item}</small>
+              </Col>
+            ))}
           </Row>
         </Container>
       </div>
+
+      <Navbar fixed="bottom" className="justify-content-around bg-white">
+        <Button variant="primary" block>
+          BOOK NOW
+        </Button>
+      </Navbar>
     </div>
   );
 }
