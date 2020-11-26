@@ -11,6 +11,7 @@ import {
   FormControl,
   ListGroup
 } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 import Link from "next/link";
 import MdArrowBack from "react-ionicons/lib/MdArrowBack";
 import MdCalendar from "react-ionicons/lib/MdCalendar";

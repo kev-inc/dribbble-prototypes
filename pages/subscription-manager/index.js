@@ -38,7 +38,7 @@ export default function SubscriptionHome() {
     }
   ];
   return (
-    <div style={{ backgroundColor: "#0f1630", paddingBottom: "48px" }}>
+    <div style={{ backgroundColor: "#0f1630", marginBottom: "48px" }}>
       <div className="navbar text-white py-4">
         <Navbar.Brand>Schedule</Navbar.Brand>
         <Nav className="ml-auto">
