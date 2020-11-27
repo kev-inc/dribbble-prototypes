@@ -12,6 +12,7 @@ import Link from "next/link";
 import IosArrowBack from "react-ionicons/lib/IosArrowBack";
 import MdShare from "react-ionicons/lib/MdShare";
 import MdPin from "react-ionicons/lib/MdPin";
+import MdBookmark from "react-ionicons/lib/MdBookmark";
 
 export default function JobViewPage() {
   const colors = {
@@ -20,7 +21,7 @@ export default function JobViewPage() {
     blue: "#3496ff"
   };
   return (
-    <div>
+    <div style={{ marginBottom: "120px" }}>
       <div
         style={{
           position: "absolute",
@@ -76,7 +77,7 @@ export default function JobViewPage() {
               padding: "24px",
               marginTop: "20px"
             }}
-            src="https://assets.stickpng.com/thumbs/5847f9cbcef1014c0b5e48c8.png"
+            src="https://img.icons8.com/fluent/144/000000/google-logo.png"
           />
           <h5 className="montbold">Interaction Designer</h5>
           <div>
@@ -141,6 +142,25 @@ export default function JobViewPage() {
           </ul>
         </div>
       </div>
+      <Navbar fixed="bottom" className="bg-white">
+        <Button
+          variant="link"
+          className="border p-3 mx-2"
+          style={{ borderRadius: "16px" }}
+        >
+          <MdBookmark color={colors.blue} />
+        </Button>
+        <Button
+          className="flex-fill montbold py-3 mx-2"
+          style={{
+            border: "0px",
+            borderRadius: "16px",
+            backgroundColor: colors.blue
+          }}
+        >
+          Apply Now
+        </Button>
+      </Navbar>
     </div>
   );
 }

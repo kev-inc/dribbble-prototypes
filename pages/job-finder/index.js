@@ -23,7 +23,7 @@ export default function JobIndexPage() {
     {
       role: "UI Designer",
       company: "Google LLC",
-      img: "https://assets.stickpng.com/thumbs/5847f9cbcef1014c0b5e48c8.png"
+      img: "https://img.icons8.com/fluent/144/000000/google-logo.png"
     },
     {
       role: "UX Copywriter",
