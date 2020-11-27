@@ -19,6 +19,11 @@ export default function IndexPage() {
       name: "Medical App",
       href: "/medical",
       url: "https://dribbble.com/shots/14646783-Medical-mobile-app"
+    },
+    {
+      name: "Job Finder App",
+      href: "/job-finder",
+      url: "https://dribbble.com/shots/14652716-Job-Finder-App"
     }
   ];
   return (
