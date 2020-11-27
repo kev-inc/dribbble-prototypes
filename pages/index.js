@@ -6,14 +6,9 @@ import LogoGithub from "react-ionicons/lib/LogoGithub";
 export default function IndexPage() {
   const apps = [
     {
-      name: "Hotel Booking App",
-      href: "/booking",
-      url: "https://dribbble.com/shots/14646942-Booking-App"
-    },
-    {
-      name: "Subscription Manager App",
-      href: "/subscription-manager",
-      url: "https://dribbble.com/shots/14646957-Subscription-manager-Mobile-app"
+      name: "Ticket App",
+      href: " /tickets",
+      url: "https://dribbble.com/shots/14656403-Tickets-Aggregator-App"
     },
     {
       name: "Medical App",
@@ -24,6 +19,16 @@ export default function IndexPage() {
       name: "Job Finder App",
       href: "/job-finder",
       url: "https://dribbble.com/shots/14652716-Job-Finder-App"
+    },
+    {
+      name: "Hotel Booking App",
+      href: "/booking",
+      url: "https://dribbble.com/shots/14646942-Booking-App"
+    },
+    {
+      name: "Subscription Manager App",
+      href: "/subscription-manager",
+      url: "https://dribbble.com/shots/14646957-Subscription-manager-Mobile-app"
     }
   ];
   return (
