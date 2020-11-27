@@ -146,7 +146,7 @@ export default function JobIndexPage() {
       </div>
 
       <div
-        className="pl-3 mb-4"
+        className="pl-3 pb-4"
         style={{
           overflow: "auto",
           whiteSpace: "nowrap",
@@ -155,29 +155,31 @@ export default function JobIndexPage() {
         }}
       >
         {popular.map((item, index) => (
-          <div
-            className="flex-column mr-4 d-inline-flex align-items-center justify-content-center shadow-sm"
-            style={{
-              paddingTop: "24px",
-              paddingBottom: "24px",
-              width: "144px",
-              borderRadius: "16px",
-              color: colors.darkblue
-            }}
-          >
-            <Image
-              src={item.img}
+          <Link href="/job-finder/view">
+            <div
+              className="flex-column mr-4 d-inline-flex align-items-center justify-content-center neushadows"
               style={{
-                width: "32px",
-                height: "32px",
-                objectFit: "cover",
-                marginTop: "24px",
-                marginBottom: "24px"
+                paddingTop: "24px",
+                paddingBottom: "24px",
+                width: "144px",
+                borderRadius: "16px",
+                color: colors.darkblue
               }}
-            />
-            <h6 className="montbold">{item.role}</h6>
-            <small className="text-muted">{item.company}</small>
-          </div>
+            >
+              <Image
+                src={item.img}
+                style={{
+                  width: "32px",
+                  height: "32px",
+                  objectFit: "cover",
+                  marginTop: "24px",
+                  marginBottom: "24px"
+                }}
+              />
+              <h6 className="montbold">{item.role}</h6>
+              <small className="text-muted">{item.company}</small>
+            </div>
+          </Link>
         ))}
       </div>
 
@@ -192,7 +194,7 @@ export default function JobIndexPage() {
         {suggestions.map((item, index) => (
           <Card
             body
-            className="m-2 shadow-sm border-0"
+            className="m-2 neushadows border-0"
             style={{ borderRadius: "12px" }}
           >
             <div className="d-flex align-items-center">
