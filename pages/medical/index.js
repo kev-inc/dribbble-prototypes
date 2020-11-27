@@ -40,7 +40,16 @@ export default function MedicalPage() {
     }
   ];
   return (
-    <div style={{ marginBottom: "64px" }} className="px-2">
+    <div style={{ marginBottom: "64px" }}>
+      <div
+        style={{
+          backgroundColor: "pink",
+          width: "100%",
+          height: "280px",
+          position: "absolute",
+          borderBottomLeftRadius: "48px"
+        }}
+      ></div>
       <div
         className="navbar py-4 align-items-start"
         style={{ color: "#A94A48" }}
@@ -76,7 +85,7 @@ export default function MedicalPage() {
 
       <Card
         body
-        className="m-2 text-white shadow-sm"
+        className="mb-4 text-white shadow-sm mx-4"
         style={{
           borderRadius: "16px",
           backgroundColor: "#5f5197",
@@ -116,14 +125,14 @@ export default function MedicalPage() {
       </Card>
 
       <div
-        className="d-flex justify-content-between mt-3 p-2 align-items-center"
+        className="d-flex justify-content-between px-3 align-items-center"
         style={{ color: "#5f5197" }}
       >
         <h5>Daily Medications</h5>
         <small>See all</small>
       </div>
 
-      <div>
+      <div className="px-3 mb-4">
         {["Atorvastatin", "Aspirine", "Ibuprofen"].map((item, index) => (
           <Card body className="m-2 shadow-sm" style={{ borderRadius: "12px" }}>
             <div className="d-flex align-items-center">
@@ -141,13 +150,13 @@ export default function MedicalPage() {
       </div>
 
       <div
-        className="d-flex justify-content-between mt-3 p-2 align-items-center"
+        className="d-flex justify-content-between px-3 align-items-center"
         style={{ color: "#5f5197" }}
       >
         <h5>Today Appointments</h5>
         <small>See all</small>
       </div>
-      <div>
+      <div className="px-3">
         {appts.map((item, index) => (
           <Card body className="m-2 shadow-sm" style={{ borderRadius: "12px" }}>
             <div className="d-flex align-items-center">

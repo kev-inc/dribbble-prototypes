@@ -69,41 +69,48 @@ export default function MedicalViewPage() {
           </Nav.Item>
         </Nav>
       </div>
-      <div className="px-4">
-        <div style={{ color: "#A94A48", fontSize: "32px", width: "75%" }}>
+      <div>
+        <div
+          className="px-4"
+          style={{ color: "#A94A48", fontSize: "32px", width: "75%" }}
+        >
           Let's find <strong>your doctor</strong>
         </div>
-        <InputGroup className="my-3 rounded shadow">
-          <FormControl
-            style={{
-              border: "0px",
-              paddingTop: "24px",
-              paddingBottom: "24px"
-            }}
-            placeholder="Doctor name"
-          />
-          <InputGroup.Append>
-            <InputGroup.Text
+        <div className="px-3">
+          <InputGroup className="my-3 rounded shadow">
+            <FormControl
               style={{
                 border: "0px",
-                backgroundColor: "white",
-                paddingTop: "12px",
-                paddingBottom: "12px"
+                paddingTop: "24px",
+                paddingBottom: "24px"
               }}
-            >
-              <MdSearch color="#5f5197" />
-            </InputGroup.Text>
-          </InputGroup.Append>
-        </InputGroup>
-
+              placeholder="Doctor name"
+            />
+            <InputGroup.Append>
+              <InputGroup.Text
+                style={{
+                  border: "0px",
+                  backgroundColor: "white",
+                  paddingTop: "12px",
+                  paddingBottom: "12px"
+                }}
+              >
+                <MdSearch color="#5f5197" />
+              </InputGroup.Text>
+            </InputGroup.Append>
+          </InputGroup>
+        </div>
         <div
-          className="d-flex justify-content-between p-2 align-items-center"
+          className="d-flex justify-content-between px-4 mb-2 align-items-center"
           style={{ color: "#5f5197" }}
         >
           <h5 className="montlight">Categories</h5>
           <small>See all</small>
         </div>
-        <div style={{ overflow: "auto", whiteSpace: "nowrap" }}>
+        <div
+          className="pl-4 mb-4"
+          style={{ overflow: "auto", whiteSpace: "nowrap" }}
+        >
           {cats.map((item, index) => (
             <div
               className="flex-column p-2 mr-4 d-inline-flex align-items-center justify-content-center text-white"
@@ -120,43 +127,49 @@ export default function MedicalViewPage() {
           ))}
         </div>
         <div
-          className="d-flex justify-content-between mt-3 p-2 align-items-center"
+          className="d-flex justify-content-between px-4 mb-2 align-items-center"
           style={{ color: "#5f5197" }}
         >
           <h5 className="montlight">Top Doctors</h5>
           <small>See all</small>
         </div>
-        {doctors.map((item, index) => (
-          <Card body className="m-2 shadow-sm" style={{ borderRadius: "12px" }}>
-            <div className="d-flex align-items-center">
-              <Image
-                roundedCircle
-                style={{
-                  height: "48px",
-                  width: "48px",
-                  objectFit: "cover",
-                  marginRight: "12px"
-                }}
-                src={item.img}
-              />
-              <div className="flex-fill">
-                <small className="text-muted">{item.job}</small>
-                <div className="montbold">{item.name}</div>
-                <div>
-                  {[1, 2, 3, 4, 5].map((item, index) => (
-                    <MdStar color="#f0ad4e" fontSize="12px" />
-                  ))}
-                </div>
-              </div>
-              <Button variant="light" size="sm">
+        <div className="px-4">
+          {doctors.map((item, index) => (
+            <Card
+              body
+              className="m-2 shadow-sm"
+              style={{ borderRadius: "12px" }}
+            >
+              <div className="d-flex align-items-center">
                 <Image
-                  style={{ width: "16px", height: "16px" }}
-                  src="https://img.icons8.com/fluent-systems-filled/96/5f5197/right.png"
+                  roundedCircle
+                  style={{
+                    height: "48px",
+                    width: "48px",
+                    objectFit: "cover",
+                    marginRight: "12px"
+                  }}
+                  src={item.img}
                 />
-              </Button>
-            </div>
-          </Card>
-        ))}
+                <div className="flex-fill">
+                  <small className="text-muted">{item.job}</small>
+                  <div className="montbold">{item.name}</div>
+                  <div>
+                    {[1, 2, 3, 4, 5].map((item, index) => (
+                      <MdStar color="#f0ad4e" fontSize="12px" />
+                    ))}
+                  </div>
+                </div>
+                <Button variant="light" size="sm">
+                  <Image
+                    style={{ width: "16px", height: "16px" }}
+                    src="https://img.icons8.com/fluent-systems-filled/96/5f5197/right.png"
+                  />
+                </Button>
+              </div>
+            </Card>
+          ))}
+        </div>
       </div>
     </div>
   );
