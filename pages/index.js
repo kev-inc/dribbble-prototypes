@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ListGroup, Card, Button } from "react-bootstrap";
 import MdArrowDropright from "react-ionicons/lib/MdArrowDropright";
 import LogoGithub from "react-ionicons/lib/LogoGithub";
+import Head from "next/head";
 
 export default function IndexPage() {
   const apps = [
@@ -33,7 +34,11 @@ export default function IndexPage() {
   ];
   return (
     <div className="p-4">
-      <h3 className="montbold">UI/UX Design Book</h3>
+      <Head>
+        <title>Kevin's UI Portfolio</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <h3 className="montbold">Kevin's UI Portfolio</h3>
       <p className="montlight">
         This website hosts a collection of webpages with designs adapted from
         Dribbble.
